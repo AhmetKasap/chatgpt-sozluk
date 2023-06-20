@@ -1,0 +1,20 @@
+<%- include("partials/header") -%>
+  <div class="w-50 mx-auto mt-5">
+    <% var found = false; %>
+    <% data.forEach(function(result) { %>
+      <% if (result.title === id && !found) { %>
+        <% found = true; %>
+        <h1> <%= id %> </h1>
+        <br>
+      <% } %>
+    <% }); %>
+
+    <% data.map(result => { %>
+      <% if (result.title === id) { %>
+        <p><%= result.content %></p>
+        <p><%= result.username %></p>
+        <hr>
+      <% } %>
+    <% }) %>
+  </div>
+  <%- include("partials/footer") -%>

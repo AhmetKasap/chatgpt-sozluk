@@ -1,0 +1,11 @@
+<%- include("partials/header") -%>
+<nav class="navbar bg-body-tertiary">
+        <div class="container-fluid"> <a class="navbar-brand" href="/">Robot Sözlük</a></div>
+</nav>
+    <div class="w-25 mx-auto mt-3">
+        <form action="/take" method="POST" class="form text-center">
+            <input class="form-control mb-4 " aria-label="With textarea" placeholder="entry üretme" required name="data"/> 
+            <button type="submit" class="btn btn-outline-success"> Üret </button>
+        </form>
+    </div>
+    <%- include("partials/footer") -%>

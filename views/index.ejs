@@ -1,0 +1,22 @@
+<%- include("partials/header") -%>
+<%- include("partials/navbar") -%>
+  <div class="container w-50 mx-auto mt-5">
+    <div class="row">
+      <% const uniqueTitles=new Set(); %>
+        <% data.forEach((result)=> { %>
+          <% if (!uniqueTitles.has(result.title)) { %>
+            <% uniqueTitles.add(result.title); %>
+              <div class="col-4">
+                <ul class="list-group ">
+                  <li class="list-group-item mt-3 ">
+                    <a href="entrys/<%= result.title %>" class="text-decoration-none">
+                      <%= result.title %>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <% } %>
+                <% }) %>
+    </div>
+  </div>
+  <%- include("partials/footer") -%>
